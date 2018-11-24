@@ -1,41 +1,11 @@
-#!/usr/bin/env python
+from setuptools import setup
 
-import os
-
-try:
-    from setuptools import setup
-    from setuptools.extension import Extension
-except ImportError:
-    raise RuntimeError('setuptools is required')
-
-DISTNAME = 'oblib'
-
-INSTALL_REQUIRES = ['numpy >= 1.10.1',
-                    'pandas >= 0.15.0',
-                    'pytz',
-                    'six',
-                    ]
-TESTS_REQUIRE = ['pytest']
-EXTRAS_REQUIRE = {
-    'test': TESTS_REQUIRE
-}
-EXTRAS_REQUIRE['all'] = sorted(set(sum(EXTRAS_REQUIRE.values(), [])))
-
-setuptools_kwargs = {
-    'zip_safe': False,
-    'scripts': [],
-    'include_package_data': True
-}
-
-# set up pvlib packages to be installed and extensions to be compiled
-PACKAGES = ['oblib']
-
-extensions = []
-
-setup(name=DISTNAME,
-      packages=PACKAGES,
-      install_requires=INSTALL_REQUIRES,
-      extras_require=EXTRAS_REQUIRE,
-      tests_require=TESTS_REQUIRE,
-      ext_modules=extensions,
-**setuptools_kwargs)
+setup(
+   name='oblib',
+   version='0.1',
+   description='A useful module',
+   author='test',
+   author_email='test@foo.com',
+   packages=['oblib'],
+   install_requires=['pytest'],
+)
