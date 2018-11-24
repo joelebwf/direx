@@ -65,7 +65,7 @@ install:
       fi
     - conda list
     - echo $PATH
-    - pip install -e .
+    # - pip install -e .
     - export
 
 script:
