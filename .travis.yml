@@ -65,9 +65,9 @@ install:
       fi
     - conda list
     - echo $PATH
-    # - pip install -e .
-    - export
+    - pip install -e .
 
 script:
+    - export;
     - pytest oblib 
 
