@@ -1,4 +1,5 @@
 language: python
+sudo: false
 python:
 - 2.7
 - 3.3
@@ -7,4 +8,4 @@ python:
 - 3.6
 script:
 - export;
-- python -m pytest oblib
+- pytest oblib
