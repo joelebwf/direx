@@ -38,5 +38,4 @@ setup(name=DISTNAME,
       extras_require=EXTRAS_REQUIRE,
       tests_require=TESTS_REQUIRE,
       ext_modules=extensions,
-      classifiers=CLASSIFIERS,
 **setuptools_kwargs)
