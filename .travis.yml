@@ -65,8 +65,8 @@ install:
       fi
     - conda list
     - echo $PATH
-    - ls -l /home/travis/miniconda/envs/test_env/lib
     - pip install -e .
+    - export
 
 script:
     - pytest oblib 
